@@ -155,7 +155,8 @@ alertmanager:
   ## Node labels for alertmanager pod assignment
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
-  nodeSelector: {}
+  nodeSelector:
+    agentpool: system
 
   ## Pod affinity
   ##
@@ -488,8 +489,7 @@ nodeExporter:
   ## Node labels for node-exporter pod assignment
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
-  nodeSelector:
-    - agentpool: system
+  nodeSelector: {}
 
   ## Annotations to be added to node-exporter pods
   ##
@@ -746,7 +746,8 @@ server:
   ## Node labels for Prometheus server pod assignment
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
-  nodeSelector: {}
+  nodeSelector:
+    agentpool: system
 
   ## Pod affinity
   ##
@@ -1029,7 +1030,8 @@ pushgateway:
   ## Node labels for pushgateway pod assignment
   ## Ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
-  nodeSelector: {}
+  nodeSelector:
+    agentpool: system
 
   ## Annotations to be added to pushgateway pods
   ##
